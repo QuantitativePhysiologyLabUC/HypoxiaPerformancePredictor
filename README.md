@@ -51,16 +51,33 @@ In hypoxic environments, performance can vary significantly between individuals.
 
 The wide neural network outperformed traditional regression methods, confirming the advantage of deep learning models in handling physiological complexity.
 
-## Applications
+## Predictive Model: Wide Neural Network
+This repository contains the trained regression model `trainedModel_of_neural_Network.mat`, exported from MATLAB's Regression Learner App.
+
+## File
+- `trainedModel_of_neural_Network.mat`: Contains the trained wide neural network model.
+
+##  How to Use in MATLAB
+To use this model to make predictions on a new data table `T` (same format as training data), follow these steps:
+
+```matlab
+% Load the model
+load('trainedModel_of_neural_Network.mat');
+
+% Predict
+yfit = trainedModel_of_neural_Network.predictFcn(T);
+
+ ```
+### Applications
 This model demonstrates potential for:
 - Identifying at-risk individuals in high-altitude environments
 - Personalized training and acclimatization strategies for athletes
 - Enhancing performance monitoring in medical and occupational settings
 
-## Authors
+### Authors
 - Valeria Páez and Maria Rodriguez Fernandez from Institute for Biological and Medical Engineering, Schools of Engineering, Medicine and Biological Sciences, Pontificia Universidad Católica de Chile, Santiago, Chile.
 - David Andrade from Centro de Investigación en Fisiología y Medicina de Altura, Biomedical Department, Faculty of Health Sciences, Universidad de Antofagasta, Antofagasta, Chile
 
-## License
+### License
 This project is open-source and available under the MIT License.
 
