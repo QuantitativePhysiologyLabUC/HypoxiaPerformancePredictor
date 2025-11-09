@@ -31,41 +31,41 @@ In hypoxic environments, performance can vary significantly between individuals.
 - **Model Type**: Wide Neural Network
 - **Hyperparameters**:
   - Fully Connected Layers: 1
-  - First Layer Size: 100 neurons
+  - First Layer Size: 50 neurons
   - Activation Function: ReLU
   - Iteration Limit: 1000
-  - Regularization Strength (Lambda): 0
-  - Data Standardization: Enabled
+  - Regularization Strength (Lambda): 0.01
+  - Data Standardization: No
 
 ### Validation Method
 - **Leave-One-Subject-Out (LOSO)** cross-validation
 
 ## Results
 
-| Metric | Value |
+| Metric | Value  |
 |--------|--------|
-| RMSE   | 3.9148 |
-| $R^2$  | 0.91   |
-| MSE    | 15.326 |
-| MAE    | 3.2325 |
+| RMSE   | 4.94   |
+| $R^2$  | 0.85   |
+| MSE    | 24.41  |
+| MAE    | 4.35   |
 
 The wide neural network outperformed traditional regression methods, confirming the advantage of deep learning models in handling physiological complexity.
 
 ## Predictive Model: Wide Neural Network
-This repository contains the trained regression model `trainedModel_of_neural_Network.mat`, exported from MATLAB's Regression Learner App.
+This repository contains the trained regression model `trainedModel10_NeuralNetwork.mat`, exported from MATLAB's Regression Learner App.
 
 ## File
-- `trainedModel_of_neural_Network.mat`: Contains the trained wide neural network model.
+- `trainedModel10_NeuralNetwork.mat`: Contains the trained wide neural network model.
 
 ##  How to Use in MATLAB
 To use this model to make predictions on a new data table `T` (same format as training data), follow these steps:
 
 ```matlab
 % Load the model
-load('trainedModel_of_neural_Network.mat');
+load('trainedModel10_NeuralNetwork.mat');
 
 % Predict
-yfit = trainedModel_of_neural_Network.predictFcn(T);
+yfit = trainedModel10_NeuralNetwork.predictFcn(T);
 
  ```
 ### Applications
