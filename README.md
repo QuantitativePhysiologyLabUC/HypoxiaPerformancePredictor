@@ -28,13 +28,13 @@ In hypoxic environments, performance can vary significantly between individuals.
   - VE/VCO₂ₘₐₓ (resting)
 
 ### Model Architecture
-- **Model Type**: Wide Neural Network
+- **Model Type**: Neural Network
 - **Hyperparameters**:
   - Fully Connected Layers: 1
-  - First Layer Size: 50 neurons
+  - First Layer Size: 10 neurons
   - Activation Function: ReLU
   - Iteration Limit: 1000
-  - Regularization Strength (Lambda): 0.01
+  - Regularization Strength (Lambda): 0.05
   - Data Standardization: No
 
 ### Validation Method
@@ -44,10 +44,10 @@ In hypoxic environments, performance can vary significantly between individuals.
 
 | Metric | Value  |
 |--------|--------|
-| RMSE   | 4.94   |
-| $R^2$  | 0.85   |
-| MSE    | 24.41  |
-| MAE    | 4.35   |
+| RMSE   | 5.65   |
+| $R^2$  | 0.81   |
+| MSE    | 31.95  |
+| MAE    | 5.02   |
 
 The wide neural network outperformed traditional regression methods, confirming the advantage of deep learning models in handling physiological complexity.
 
@@ -55,17 +55,17 @@ The wide neural network outperformed traditional regression methods, confirming 
 This repository contains the trained regression model `trainedModel10_NeuralNetwork.mat`, exported from MATLAB's Regression Learner App.
 
 ## File
-- `trainedModel10_NeuralNetwork.mat`: Contains the trained wide neural network model.
+- `trainedModel_17.mat`: Contains the trained wide neural network model.
 
 ##  How to Use in MATLAB
 To use this model to make predictions on a new data table `T` (same format as training data), follow these steps:
 
 ```matlab
 % Load the model
-load('trainedModel10_NeuralNetwork.mat');
+load('trainedModel_17.mat');
 
 % Predict
-yfit = trainedModel10_NeuralNetwork.predictFcn(T);
+yfit = trainedModel_17.predictFcn(T);
 
  ```
 ### Applications
