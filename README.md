@@ -52,7 +52,7 @@ In hypoxic environments, performance can vary significantly between individuals.
 The wide neural network outperformed traditional regression methods, confirming the advantage of deep learning models in handling physiological complexity.
 
 ## Predictive Model: Wide Neural Network
-This repository contains the trained regression model `trainedModel10_NeuralNetwork.mat`, exported from MATLAB's Regression Learner App.
+This repository contains the trained regression model `trainedModel_17.mat`, exported from MATLAB's Regression Learner App.
 
 ## File
 - `trainedModel_17.mat`: Contains the trained wide neural network model.
